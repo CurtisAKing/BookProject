@@ -4,12 +4,14 @@ import java.time.LocalDate;
 
 public class Author {
 	private int authorId;
-	private String name;
+	private String firstName;
+	private String lastName;
 	private LocalDate birthday;
 	private String birthplace;
 
-	public Author(String name, LocalDate birthday, String birthplace) {
-		this.name = name;
+	public Author(String firstName, String lastName, LocalDate birthday, String birthplace) {
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.birthday = birthday;
 		this.birthplace = birthplace;
 	}
@@ -22,12 +24,20 @@ public class Author {
 		this.authorId = authorId;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstName(String name) {
+		this.firstName = name;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public LocalDate getBirthday() {
