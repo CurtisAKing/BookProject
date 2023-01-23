@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88de683a-5e6f-4e2c-951f-a2ee3259454d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/AuthorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/AuthorDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/GenreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/GenreDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/SeriesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/SeriesDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Genre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Series.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Series.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

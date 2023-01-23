@@ -2,7 +2,7 @@ package org.example.models;
 
 public class Book {
 	private int bookId;
-	private int serialId;
+	private int seriesId;
 	private String title;
 	private boolean hasAudioBook;
 	private double rating;
@@ -15,12 +15,12 @@ public class Book {
 		this.bookId = bookId;
 	}
 
-	public int getSerialId() {
-		return serialId;
+	public int getSeriesId() {
+		return seriesId;
 	}
 
-	public void setSerialId(int serialId) {
-		this.serialId = serialId;
+	public void setSeriesId(int seriesId) {
+		this.seriesId = seriesId;
 	}
 
 	public String getTitle() {
@@ -31,7 +31,7 @@ public class Book {
 		this.title = title;
 	}
 
-	public boolean isHasAudioBook() {
+	public boolean getHasAudioBook() {
 		return hasAudioBook;
 	}
 
