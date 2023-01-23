@@ -115,8 +115,8 @@ public class JdbcAuthorDao implements AuthorDao{
 
 	@Override
 	public void deleteAuthor(Author authorToDelete) {
-		String sqlDeleteAuthorBooks = "DELETE author_id FROM author_books WHERE author_id = ?;";
-		String sqlDeleteAuthor = "DELETE author_id from author WHERE author_id = ?;";
+		String sqlDeleteAuthorBooks = "DELETE FROM author_books WHERE author_id = ?;";
+		String sqlDeleteAuthor = "DELETE FROM author WHERE author_id = ?;";
 		jdbcTemplate.update(sqlDeleteAuthorBooks, authorToDelete.getAuthorId());
 		jdbcTemplate.update(sqlDeleteAuthor, authorToDelete.getAuthorId());
 	}
@@ -132,7 +132,7 @@ public class JdbcAuthorDao implements AuthorDao{
 
 	@Override
 	public void removeAuthorFromBook(int authorId, int bookId) {
-		String sqlAddAuthorToBook = "DELETE author_id FROM author_books WHERE author_id = ? AND " +
+		String sqlAddAuthorToBook = "DELETE FROM author_books WHERE author_id = ? AND " +
 				"book_id = ?;";
 		jdbcTemplate.update(sqlAddAuthorToBook, authorId, bookId);
 
