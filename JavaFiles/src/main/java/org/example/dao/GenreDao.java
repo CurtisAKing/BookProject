@@ -1,6 +1,8 @@
 package org.example.dao;
 
 import org.example.models.Genre;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
+
 import java.util.List;
 
 public interface GenreDao {
@@ -18,5 +20,7 @@ public interface GenreDao {
 	void addGenreToBook(int genreId, int bookId);
 
 	void deleteGenreFromBook(int genreId, int bookId);
+
+	Genre mapRowToGenre(SqlRowSet rowSet);
 
 }

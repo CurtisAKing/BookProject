@@ -2,6 +2,7 @@ package org.example.dao;
 
 import org.example.models.Author;
 import java.util.List;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 public interface AuthorDao {
 	Author getAuthor(int authorID);
@@ -19,5 +20,7 @@ public interface AuthorDao {
 	void addAuthorToBook(int authorId, int bookId);
 
 	void removeAuthorFromBook(int authorId, int bookId);
+
+	Author mapRowToAuthor(SqlRowSet rowSet);
 
 }

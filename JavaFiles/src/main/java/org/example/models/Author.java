@@ -9,13 +9,6 @@ public class Author {
 	private LocalDate birthday;
 	private String birthplace;
 
-	public Author(String firstName, String lastName, LocalDate birthday, String birthplace) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.birthday = birthday;
-		this.birthplace = birthplace;
-	}
-
 	public int getAuthorId() {
 		return authorId;
 	}

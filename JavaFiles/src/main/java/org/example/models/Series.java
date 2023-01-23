@@ -4,10 +4,6 @@ public class Series {
 	private int seriesID;
 	private String seriesName;
 
-	public Series(String seriesName) {
-		this.seriesName = seriesName;
-	}
-
 	public int getSeriesID() {
 		return seriesID;
 	}

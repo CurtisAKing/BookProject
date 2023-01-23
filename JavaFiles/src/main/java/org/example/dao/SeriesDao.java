@@ -1,6 +1,8 @@
 package org.example.dao;
 
 import org.example.models.Series;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
+
 import java.util.List;
 public interface SeriesDao {
 
@@ -18,5 +20,5 @@ public interface SeriesDao {
 
 	void removeSeriesFromBook(int seriesId, int bookID);
 
-
+	Series mapRowToSeries(SqlRowSet rowSet);
 }

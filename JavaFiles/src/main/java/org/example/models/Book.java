@@ -7,13 +7,6 @@ public class Book {
 	private boolean hasAudioBook;
 	private double rating;
 
-	public Book(int serialId, String title, boolean hasAudioBook, double rating) {
-		this.serialId = serialId;
-		this.title = title;
-		this.hasAudioBook = hasAudioBook;
-		this.rating = rating;
-	}
-
 	public int getBookId() {
 		return bookId;
 	}
