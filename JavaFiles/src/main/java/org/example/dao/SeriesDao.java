@@ -16,9 +16,9 @@ public interface SeriesDao {
 
 	void deleteSeries(int seriesId);
 
-	void addSeriesToBook(int seriesId, int bookId);
+	void addSeriesToBook(int seriesId);
 
-	void removeSeriesFromBook(int seriesId, int bookID);
+	void removeSeriesFromBook(int bookId);
 
 	Series mapRowToSeries(SqlRowSet rowSet);
 }

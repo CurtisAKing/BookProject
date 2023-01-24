@@ -35,14 +35,26 @@ public class JdbcBookDao implements BookDao {
 	@Override
 	public List<Book> getBookByTitle(String title) {
 		List<Book> bookList = new ArrayList<>();
-		String titleSearch = "%" + "title" + "%";
 		String sqlGetBookByTitle = "SELECT b.book_id, b.title, s.series_name, g.genre_name, b.has_audiobook, b.rating " +
 				"FROM book b " +
 				"JOIN series s USING (series_id) " +
 				"JOIN genre_books gb ON b.book_id = gb.book_id " +
 				"JOIN genre g USING (genre_id) " +
 				"WHERE b.title = ?;";
-		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetBookByTitle, titleSearch);
+		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetBookByTitle, title);
+		while(result.next()){
+			bookList.add(mapRowToBook(result));
+		}
+		return bookList;
+	}
+
+	@Override
+	public List<Book> getBookBySeries(String name) {
+		List<Book> bookList = new ArrayList<>();
+		String sqlGetBookByTitle = "SELECT book_id, title, series_name, genre_name, has_audiobook, rating " +
+				"FROM book " +
+				"WHERE series_name = ?;";
+		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetBookByTitle, name);
 		while(result.next()){
 			bookList.add(mapRowToBook(result));
 		}

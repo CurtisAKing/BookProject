@@ -58,21 +58,21 @@ public class JdbcSeriesDao implements SeriesDao{
 
 	@Override
 	public void deleteSeries(int seriesId) {
-		String sqlDelete = "DELETE FROM series_books WHERE series_id = ?; " +
+		String sqlDelete = "DELETE series_name FROM book WHERE series_id = ?; " +
 				"DELETE FROM series WHERE series_id = ?;";
 		jdbcTemplate.update(sqlDelete, seriesId, seriesId);
 	}
 
 	@Override
-	public void addSeriesToBook(int seriesId, int bookId) {
-		String sqlAdd = "INSERT INTO series_books (series_id, book_id) VALUES (?,?);";
-		jdbcTemplate.update(sqlAdd, seriesId, bookId);
+	public void addSeriesToBook(int seriesId) {
+		String sqlAdd = "UPDATE book SET series_name = (SELECT series_name FROM series WHERE series_id = ?);";
+		jdbcTemplate.update(sqlAdd, seriesId);
 	}
 
 	@Override
-	public void removeSeriesFromBook(int seriesId, int bookID) {
-		String sqlRemove = "DELETE FROM series_books WHERE series_id = ? AND book_id = ?;";
-		jdbcTemplate.update(sqlRemove, seriesId, bookID);
+	public void removeSeriesFromBook(int bookId) {
+		String sqlRemove = "DELETE series_name FROM book WHERE book_id = ?;";
+		jdbcTemplate.update(sqlRemove, bookId);
 	}
 
 	@Override

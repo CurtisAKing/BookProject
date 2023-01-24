@@ -10,6 +10,8 @@ public interface BookDao {
 
 	List<Book> getBookByTitle(String title);
 
+	public List<Book> getBookBySeries(String name);
+
 	Book createBook(Book book);
 
 	void updateBook(Book updatedBook);
