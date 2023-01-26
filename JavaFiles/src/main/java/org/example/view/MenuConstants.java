@@ -1,5 +1,7 @@
 package org.example.view;
 
+import org.example.BookProjectCLI;
+
 public final class MenuConstants {
 	public static final String MAIN_MENU_BOOKS = "Books";
 	public static final String MAIN_MENU_AUTHORS = "Authors";
@@ -51,5 +53,7 @@ public final class MenuConstants {
 	public static final String SERIES_MENU_REMOVE_BOOK = "Unassign book to series";
 	private static final String[] SERIES_MENU_OPTIONS = {SERIES_MENU_GET_BY_ID, SERIES_MENU_GET_BY_NAME, SERIES_MENU_CREATE,
 			SERIES_MENU_UPDATE, SERIES_MENU_DELETE, SERIES_MENU_ADD_BOOK, SERIES_MENU_REMOVE_BOOK};
+
+
 
 }
